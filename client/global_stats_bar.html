@@ -1,0 +1,65 @@
+<!-- Equal height: http://www.bootply.com/VKluGU4l5r -->
+<template name="global_stats_bar">
+<div class="container">
+	<div class="row">
+
+		<div class=" col-lg-3">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<strong>Uptime</strong>
+				</div>
+				<div class="panel-body text-center">
+					<h3>{{serverUptime}}</h3>
+				</div>
+			
+			</div>
+		</div>
+		
+		<div class=" col-lg-3">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<strong>Total nodes</strong>
+					<span class="text-right">
+						<a href="#">
+							<strong><i class="mdi-content-forward"></i></strong>
+						</a>
+					</span>
+				</div>
+				<div class="panel-body text-center">
+					<h3>{{getPublishedCount 'counter_nodes'}}</h3>
+				</div>
+			
+			</div>
+		</div>
+	
+		<div class=" col-lg-3">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<strong>Tests counter</strong>
+				</div>
+				<div class="panel-body text-center" >
+					<h3>
+						{{globalStats.tests.total}} / 
+						<span class="text-success">{{globalStats.tests.ok}}</span> / 
+						<span class="text-danger">{{globalStats.tests.error}}</span>
+					</h3>
+				</div>
+			
+			</div>
+		</div>
+		
+		<div class=" col-lg-3">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<strong>Last test at</strong>
+				</div>
+				<div class="panel-body text-center">
+					<h3>{{globalStats.run_last_dt}}</h3>
+				</div>
+			
+			</div>
+		</div>
+	
+	</div>	
+</div>
+</template>

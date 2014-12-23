@@ -1,0 +1,36 @@
+<template name="view_node">
+<p>
+Node: {{nodeInfo.host}}
+<div></div>
+</p>
+
+<div class="container">
+	<div class="row">
+		{{#each allNodesList}}
+		<div class=" col-lg-4">
+		<div class="panel panel-danger" id="host_{{this._id}}">
+			<div class="panel-heading">
+				<h3 class="panel-title" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">
+					Host: <strong>{{host}}</strong>
+				</h3>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+		</div>
+
+		{{/each}}
+	</div>
+</div>
+
+
+
+<p>
+<ul>
+{{#each toCheck}}
+<li>{{title}}</li>
+{{/each}}
+</ul>
+</p>
+</template>
