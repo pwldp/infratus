@@ -1,3 +1,4 @@
 .docs
 .meteor
 run.sh
+ovpnupload/openvpnserver.log
