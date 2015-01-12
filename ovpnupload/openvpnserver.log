@@ -1,10 +1,10 @@
 OpenVPN CLIENT LIST
 Updated,Mon Jan 12 15:07:57 2015
 Common Name,Real Address,Bytes Received,Bytes Sent,Connected Since
-Jacek_Latosinski,176.111.120.27:1194,273034,1389753,Mon Jan 12 14:48:23 2015
+Jack_Strong,1.2.3.4:1194,273034,1389753,Mon Jan 12 14:48:23 2015
 ROUTING TABLE
 Virtual Address,Common Name,Real Address,Last Ref
-172.16.0.10,Jacek_Latosinski,176.111.120.27:1194,Mon Jan 12 15:07:47 2015
+172.16.0.10,Jack_Strong,1.2.3.4:1194,Mon Jan 12 15:07:47 2015
 GLOBAL STATS
 Max bcast/mcast queue length,1
 END
