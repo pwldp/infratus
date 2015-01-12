@@ -1,7 +1,7 @@
 /*
-Collection: global_stats
+Collection: ovpn_current_status
 */
-collGlobalStats = new Mongo.Collection("global_stats");
+collOvpnCurrentStatus = new Mongo.Collection("ovpn_current_status");
 //
 if (Meteor.isServer){
 	Meteor.startup(function () {
@@ -9,6 +9,7 @@ if (Meteor.isServer){
 		//console.log("RESET data in collGlobalStats...");
 		//collGlobalStats.remove({});
 		//
+		/*
 		if (collGlobalStats.find().count() === 0) {
 			console.log("INSERT TO collGlobalStats...");
 			collGlobalStats.insert({
@@ -24,17 +25,18 @@ if (Meteor.isServer){
 				}
 			});
 		}
+		*/
 		//
-		Meteor.publish("global_stats", function(){
-			return collGlobalStats.find({});
+		Meteor.publish("ovpn_current_status", function(){
+			return collOvpnCurrentStatus.find({});
 		});
 		//
-		console.log("collGlobalStats.count=",+collGlobalStats.find().count());
+		console.log("collOvpnCurrentStatus.count=",+collOvpnCurrentStatus.find().count());
 	});
 };
 //
 if (Meteor.isClient){
-	Meteor.subscribe('global_stats');
+	Meteor.subscribe('ovpn_current_status');
 };
 /*
 EOF

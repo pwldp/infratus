@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "ovpn-log-parser": {
+      "version": "0.1.1"
+    }
+  }
+}

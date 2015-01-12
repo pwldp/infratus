@@ -6,7 +6,7 @@
 		<div class=" col-lg-3">
 			<div class="panel panel-info">
 				<div class="panel-heading">
-					<strong>Uptime</strong>
+					<strong>Server uptime</strong>
 				</div>
 				<div class="panel-body text-center">
 					<h3>{{serverUptime}}</h3>
@@ -51,10 +51,15 @@
 		<div class=" col-lg-3">
 			<div class="panel panel-info">
 				<div class="panel-heading">
-					<strong>Last test at</strong>
+					<strong>OpenVPN connected clients</strong>
+					<span class="text-right">
+						<a href="/ovpnCurrentStatus">
+							<strong><i class="mdi-content-forward"></i></strong>
+						</a>
+					</span>
 				</div>
 				<div class="panel-body text-center">
-					<h3>{{globalStats.run_last_dt}}</h3>
+					<h3>{{ovpnClientsCount}}</h3>
 				</div>
 			
 			</div>

@@ -1,0 +1,47 @@
+<template name="ovpn_status">
+
+<ul class="breadcrumb">
+    <li><a href="/ovpnCurrentStatus">OpenVPN</a></li>
+    <li><a href="/ovpnClients" class="active">Clients</a></li>
+    <li class="active">Connections</li>
+</ul>
+
+<h2><strong>OpenVPN connected clients</strong></h2>
+<p>
+Last updated at: {{lastUpdate}}
+</p>
+
+<p>
+	<h4>Connected clients list</h4>
+</p>
+
+{{#if clientList}}
+<table class="table">
+<tr>
+	<th>#</th>
+	<th>Common name</th>
+	<th class="text-right">Real address</th>
+	<th>Connected since</th>
+	<th class="text-right">Bytes received</th>
+	<th class="text-right">Bytes sent</th>
+</tr>
+{{#each clientList}}
+<tr>
+	<td></td>
+	<td>
+		<a href="/ovpnClientHist/{{common_name}}">
+			{{common_name}}
+		</a>
+	</td>
+	<td class="text-right">{{real_address}}</td>
+	<td>{{connected_since}}</td>
+	<td class="text-right">{{bytes_received}}</td>
+	<td class="text-right">{{bytes_sent}}</td>
+	
+</tr>
+{{/each}}
+</table>
+{{else}}
+<span class="text-warning">Not connected clients.</span>
+{{/if}}
+</template>

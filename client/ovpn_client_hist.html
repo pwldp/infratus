@@ -1,0 +1,42 @@
+<template name="ovpn_client_hist">
+
+<ul class="breadcrumb">
+    <li><a href="/ovpnCurrentStatus">OpenVPN</a></li>
+    <li><a href="/ovpnClients">Clients</a></li>
+    <li>History</li>
+    <li class="active">{{ovpn_common_name}}</li>
+</ul>
+
+<h2><strong>OpenVPN client history for: <span class="text-info">{{ovpn_common_name}}</span></strong></h2>
+
+<p>
+
+<table class="table">
+	<tr>
+		<th>#</th>
+		<th>Conn. start</th>
+		<th>Conn. stop</th>
+		<th>Real address</th>
+		<th class="text-right">Bytes sent</th>
+		<th class="text-right">Bytes received</th>
+	</tr>
+{{#each clientsHist}}
+	<tr>
+		<td>{{this.index}}</td>
+		<td>{{connected_since}}</td>
+		<td>{{connected_until}}</td>
+		<td>{{real_address}}</td>
+		<td class="text-right">{{bytes_sent}}</td>
+		<td class="text-right">{{bytes_received}}</td>
+	</tr>
+{{/each}}	
+	<tr>
+		<th colspan="4" class="text-right">Total:</th>
+		<th class="text-right">{{totalBytes.bytes_sent}}</th>
+		<th class="text-right">{{totalBytes.bytes_received}}</th>
+	</tr>
+</table>
+
+</p>
+
+</template>
